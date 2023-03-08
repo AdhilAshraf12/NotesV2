@@ -1,0 +1,124 @@
+.lotion {
+  display: flex;
+  height: 90vh;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+
+.title-thing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* .app-notes:hover {
+  background: #00c8ff;
+
+}
+.lotion-sidebar-note.active,
+.lotion-sidebar-note.active small {
+  background: #08c;
+  color: white;
+} */
+
+.sidebar-header h1 {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+
+.buttons-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+.notes-edit {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  display: flex;
+  flex:1;
+}
+
+#title {
+  font-size: 24px;
+  font-weight:normal;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+#body {
+  width: 98.3%;
+  height: 300px;
+  font-size: 18px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.note {
+  margin-bottom: 10px;
+}
+
+#add {
+  border: none;
+  background-color: aliceblue;
+  color: rgb(0, 119, 255);
+  padding: 25px;
+  border-radius: 5px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#delete {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding-left: 5px;
+  color: red;
+  border: none;
+}
+
+#save {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  padding-left: 5px;
+  color: rgb(0, 162, 255);
+  border: none;
+}
+
+.body-div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
