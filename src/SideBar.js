@@ -1,6 +1,7 @@
 import './App.css';
+import striptags from 'striptags';
 
-function Sidebar({ notes, onAdd, onDelete, activenote,setactivenote}) {
+function Sidebar({ notes, onAdd, setactivenote, activenote }) {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
@@ -9,12 +10,12 @@ function Sidebar({ notes, onAdd, onDelete, activenote,setactivenote}) {
       </div>
       <div className="sidebar-notes">
         {notes.map((note) => (
-         <div className={`note ${note.id === activenote && "active"}`} key={note.id} onClick={()=> setactivenote(note.id)}>
+          <div className={`sidebar-note ${note.id === activenote && 'active'}`}
+            onClick={() => setactivenote(note.id)}>
             <div className="note-title">
               <strong>{note.title}</strong>
-              <button id="delete" onClick={() => onDelete(note.id)}>delete</button>
             </div>
-            <p>{note.body && note.body.substr(0, 100) + "..."}</p>
+            <p>{note.body && striptags(note.body).substr(0, 100) + "..."}</p>
             <small className="note-date">date {new Date(note.lastdate).toLocaleDateString("en-GB", { hour: "2-digit", minute: "2-digit" })}</small>
           </div>
         ))}

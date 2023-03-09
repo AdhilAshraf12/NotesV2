@@ -1,6 +1,7 @@
 .lotion {
   display: flex;
   height: 90vh;
+  background-color:rgba(244, 244, 208, 0.738);
 }
 
 .main-container {
@@ -32,18 +33,25 @@
   margin-bottom: 10px;
 }
 
-/* .app-notes:hover {
-  background: #00c8ff;
-
+.sidebar-note:hover {
+  background: #fff59a;
 }
-.lotion-sidebar-note.active,
-.lotion-sidebar-note.active small {
-  background: #08c;
-  color: white;
-} */
+.sidebar-note {
+  padding: 10px;
+}
+
+.sidebar-note.active,
+.sidebar-note.active small {
+  background: rgb(253, 235, 77);
+  color: rgb(0, 0, 0);
+}
 
 .sidebar-header h1 {
   margin: 0;
+  font-size: 34px;
+}
+.sidebar-header{
+  border-bottom: 1px solid #ccc;
 }
 
 .main {
@@ -65,7 +73,7 @@
   margin-bottom: 20px;
   flex-direction: column;
   display: flex;
-  flex:1;
+  flex: 1;
 }
 
 #title {
@@ -76,6 +84,7 @@
 }
 
 #body {
+  flex: 1;
   width: 98.3%;
   height: 300px;
   font-size: 18px;
@@ -87,6 +96,15 @@
 
 .note {
   margin-bottom: 10px;
+}
+
+.inactivenote{
+  width: 70%;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 2rem;
+  color: #999;
 }
 
 #add {

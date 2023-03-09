@@ -3,7 +3,9 @@ import Sidebar from "./SideBar";
 import uuid from "react-uuid";
 import Main from "./Main";
 import "./App.css";
-
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import Note from "./Note";
 
 function App() {
 
@@ -29,20 +31,26 @@ function App() {
     return notes.find((note) => note.id === activenote)
   }
 
-  const onedit = () => {
-    const newNotesArray = notes.map((note) => {
-      if (note.id === activenote) {
-        return {...note, title: "New Note", body: "", lastdate: Date.now()}
+  const oneditnote = (updatednote) => {
+    const updatedarray = notes.map((note) => {
+      if(note.id === activenote) {
+        return updatednote;
       }
-      return note
-    })
-    setnotes(newNotesArray)
+      return note;
+    });
+    setnotes(updatedarray);
   }
-
+  
+  function saveNote (note) {
+    let notes = JSON.parse(localStorage.getItem('notes')) || [];
+    notes.push(note);
+    localStorage.setItem('notes', JSON.stringify(notes));
+  }
+  
   return (
     <div>
       <div className="title-thing">
-      <h1><center>Notion</center></h1>
+      <h1><center>Lotion</center></h1>
       <h5><font color = "grey"><em>Like notion but worse</em></font></h5>
       </div>
     <div className = "lotion">
@@ -52,8 +60,7 @@ function App() {
     activenote = {activenote}
     setactivenote = {setactivenote}>
     </Sidebar>
-    <Main activenote = {getactivenote()}>
-    </Main>
+    <Main activenote={getactivenote()} oneditnote={oneditnote} onDelete = {onDelete} onSave={saveNote}></Main>
   </div>
   </div>
   );
