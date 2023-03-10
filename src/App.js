@@ -5,7 +5,6 @@ import Main from "./Main";
 import "./App.css";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import Note from "./Note";
 
 function App() {
 
