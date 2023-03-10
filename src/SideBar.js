@@ -1,5 +1,6 @@
 import './App.css';
 import striptags from 'striptags';
+import { useParams } from 'react-router-dom';
 
 function Sidebar({ notes, onAdd, setactivenote, activenote }) {
   return (
