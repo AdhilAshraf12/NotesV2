@@ -3,9 +3,8 @@ import Sidebar from "./SideBar";
 import uuid from "react-uuid";
 import Main from "./Main";
 import "./App.css";
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
 
+import 'react-quill/dist/quill.snow.css';
 
 function App() {
 

@@ -14,6 +14,7 @@ function Main({ activenote, oneditnote, onDelete }) {
       [key]: value,
       lastdate: Date.now(),
     });
+    handleSave();
   };
 
   const handleDelete = () => {
