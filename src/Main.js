@@ -16,7 +16,8 @@ function Main({ activenote, oneditnote, onDelete }) {
     });
     handleSave();
   };
-
+  
+  
   const handleDelete = () => {
     setShowDeleteConfirmDialog(true);
   };
