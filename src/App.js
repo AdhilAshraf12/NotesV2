@@ -5,7 +5,7 @@ import Main from "./Main";
 import "./App.css";
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import Note from "./Note";
+
 
 function App() {
 
@@ -41,12 +41,6 @@ function App() {
     setnotes(updatedarray);
   }
   
-  function saveNote (note) {
-    let notes = JSON.parse(localStorage.getItem('notes')) || [];
-    notes.push(note);
-    localStorage.setItem('notes', JSON.stringify(notes));
-  }
-  
   return (
     <div>
       <div className="title-thing">
@@ -60,7 +54,7 @@ function App() {
     activenote = {activenote}
     setactivenote = {setactivenote}>
     </Sidebar>
-    <Main activenote={getactivenote()} oneditnote={oneditnote} onDelete = {onDelete} onSave={saveNote}></Main>
+    <Main activenote={getactivenote()} oneditnote={oneditnote} onDelete = {onDelete} onSave></Main>
   </div>
   </div>
   );
